@@ -1,0 +1,37 @@
+#include<iostream>
+using namespace std;
+int i,j,k,n;
+void ascending(int *array, int size)
+{
+ for(i = 0; i<size; i++)
+ cout << array[i] << " ";
+ cout << endl;
+}
+void insertion(int *array, int size)
+{
+ for(i = 1; i<size; i++) {
+ k = array[i];
+ j = i;
+ while(j > 0 && array[j-1]>k) {
+ array[j] = array[j-1];
+ j--;
+ }
+ array[j] = k;
+ }
+}
+int main()
+{
+ cout << "Enter the number of elements: ";
+ cin >> n;
+ int arr[n];
+ cout << "Enter elements:" << endl;
+ for(int i = 0; i<n; i++)
+ {
+ cin >> arr[i];
+ }
+ cout << "Array before Sorting: ";
+ ascending(arr, n);
+ insertion(arr, n);
+ cout << "Array after Sorting: ";
+ ascending(arr, n);
+}
