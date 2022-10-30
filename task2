@@ -1,0 +1,20 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+ int a,b;
+ cout<<"enter the first number a=";
+ cin>>a;
+ cout<<"enter the second number b=";
+ cin>>b;
+ cout<<"\n\nbefore swapping the numbers\n";
+ cout<<"\nthe value of a="<<a;
+ cout<<"\nthe value of b="<<b;
+ a=a+b;
+ b=a-b;
+ a=a-b;
+ cout<<"\n\nafter swapping the numbers:-\n";
+ cout<<"\nthe value of a="<<a;
+ cout<<"\nthe value of b="<<b;
+ return 0;
+}
